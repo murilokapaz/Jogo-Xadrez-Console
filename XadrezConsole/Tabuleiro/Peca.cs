@@ -13,5 +13,9 @@ namespace ns.tabuleiro {
             this.cor = cor;
             this.qteMovimentos = 0;
         }
+
+        public void IncrementarQtMovimentos() {
+            qteMovimentos++;
+        }
     }
 }

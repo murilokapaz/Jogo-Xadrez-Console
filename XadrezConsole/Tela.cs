@@ -1,6 +1,7 @@
 ﻿using System;
 using ns.tabuleiro;
 using XadrezConsole.Tabuleiro.Enums;
+using ns.xadrez;
 
 namespace xadrez_console {
     class Tela {
@@ -40,6 +41,12 @@ namespace xadrez_console {
                 Console.ForegroundColor = aux;
 
             }
+        }
+        public static PosicaoXadrez LerPosicaoXadrez() {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(coluna, linha);
         }
 
     }
