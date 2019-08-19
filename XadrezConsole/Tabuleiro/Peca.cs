@@ -17,6 +17,15 @@ namespace ns.tabuleiro {
         public void IncrementarQtMovimentos() {
             qteMovimentos++;
         }
+        public bool ExisteMovimentosPossiveis() {
+            bool[,] mat = MovimentosPossiveis();
+            for (int i = 0; i < tab.Linhas; i++) {
+                for (int j = 0; j < tab.Colunas; j++) {
+                    if (mat[i, j]) return true;
+                }
+            }
+            return false;
+        }
 
         public abstract bool[,] MovimentosPossiveis();
     }

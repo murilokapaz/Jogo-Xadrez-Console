@@ -9,6 +9,11 @@ namespace ns.tabuleiro {
             this.linha = linha;
             this.coluna = coluna;
         }
+        public void DefinirValores(int linha, int coluna) {
+            this.linha = linha;
+            this.coluna = coluna;
+        }
+
 
         public override string ToString() {
             return linha
