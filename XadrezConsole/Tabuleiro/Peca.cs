@@ -26,6 +26,9 @@ namespace ns.tabuleiro {
             }
             return false;
         }
+        public bool PodeMoverPara(Posicao pos) {
+            return MovimentosPossiveis()[pos.linha, pos.coluna];
+        }
 
         public abstract bool[,] MovimentosPossiveis();
     }

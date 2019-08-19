@@ -27,7 +27,7 @@ namespace xadrez_console {
                         Console.WriteLine();
                         Console.Write("Destino: ");
                         Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
-
+                        partida.ValidarPosicaoDestino(origem, destino);
                         partida.RealizaJogada(origem, destino);
                     }
                     catch (TabuleiroException e) {

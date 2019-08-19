@@ -46,6 +46,11 @@ namespace ns.xadrez {
                 throw new TabuleiroException("Não há movimentos possíveis para a peça de origem escolhida!");
             }
         }
+        public void ValidarPosicaoDestino(Posicao origem, Posicao destino) {
+            if (!Tab.Peca(origem).PodeMoverPara(destino)) {
+                throw new TabuleiroException("Posicao de destino inválida!");
+            }
+        }
         public void MudaJogador() {
             if (JogadorAtual == Cor.Branca) JogadorAtual = Cor.Preta;
             else JogadorAtual = Cor.Branca;
