@@ -12,7 +12,7 @@ namespace ns.xadrez {
         }
 
 
-        public override bool[,] MovimentosPossiveis() {
+        public override bool[,] movimentosPossiveis() {
             bool[,] mat = new bool[tab.Linhas, tab.Colunas];
             Posicao pos = new Posicao(0, 0);
 

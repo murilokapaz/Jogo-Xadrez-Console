@@ -10,7 +10,7 @@ namespace ns.xadrez {
             Peca p = tab.Peca(pos);
             return p == null || p.cor != this.cor;
         }
-        public override bool[,] MovimentosPossiveis() {
+        public override bool[,] movimentosPossiveis() {
             bool[,] mat = new bool[tab.Linhas, tab.Colunas];
             Posicao pos = new Posicao(0, 0);
 

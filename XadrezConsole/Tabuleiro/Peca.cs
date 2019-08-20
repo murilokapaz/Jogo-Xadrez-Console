@@ -14,22 +14,32 @@ namespace ns.tabuleiro {
             this.qteMovimentos = 0;
         }
 
-        public void IncrementarQtMovimentos() {
+        public void incrementarQteMovimentos() {
             qteMovimentos++;
         }
-        public bool ExisteMovimentosPossiveis() {
-            bool[,] mat = MovimentosPossiveis();
+
+        public void decrementarQteMovimentos() {
+            qteMovimentos--;
+        }
+
+        public bool existeMovimentosPossiveis() {
+            bool[,] mat = movimentosPossiveis();
             for (int i = 0; i < tab.Linhas; i++) {
                 for (int j = 0; j < tab.Colunas; j++) {
-                    if (mat[i, j]) return true;
+                    if (mat[i, j]) {
+                        return true;
+                    }
                 }
             }
             return false;
         }
-        public bool PodeMoverPara(Posicao pos) {
-            return MovimentosPossiveis()[pos.linha, pos.coluna];
+
+        public bool podeMoverPara(Posicao pos) {
+            return movimentosPossiveis()[pos.linha, pos.coluna];
         }
 
-        public abstract bool[,] MovimentosPossiveis();
-    }
+        public abstract bool[,] movimentosPossiveis();
+    
+
+}
 }
